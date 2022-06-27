@@ -30,13 +30,16 @@ const Quizzes = () => {
 
   return (
     <>
-      <div className="row m-4">
+      <div className="mt-3">
         <Row className="align-items-center flex-column flex-md-row">
           {quizList &&
             getActiveQuizList(quizList).map((quiz) => {
               return (
-                <Col md={6} lg={4} key={quiz.id}>
-                  <Card as="div" className="m-3 text-center shadow rounded">
+                <Col md={6} sm={12} lg={4} key={quiz.id} >
+                  <Card
+                    as="div"
+                    className="lg-m-3 sm-m-1 md-m-2 text-center shadow rounded"
+                  >
                     <Card.Header>
                       <Card.Title>{quiz.topic}</Card.Title>
                     </Card.Header>
@@ -52,7 +55,7 @@ const Quizzes = () => {
                       as="button"
                       variant="outline-primary"
                       size="sm"
-                      className="mb-3 mx-5"
+                      className="mb-3 mx-3"
                       onClick={() => takeQuizHandler(quiz.id)}
                     >
                       Take the quiz

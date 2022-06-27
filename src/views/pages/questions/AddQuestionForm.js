@@ -65,7 +65,7 @@ const AddQuestionForm = ({ quizId }) => {
   return (
     <>
       {!showForm ? (
-        <div className="m-3" style={{ width: "fit-content" }}>
+        <div className="lg-m-3 sm-m-1 md-m-2" style={{ width: "fit-content" }}>
           <Button
             size="sm"
             onClick={() => {

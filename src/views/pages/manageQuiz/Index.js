@@ -34,13 +34,15 @@ const Index = () => {
 
   if(!quizList.length){
     return (
-      <h4 className="m-3 mt-5 text-center text-danger">No Quiz Found</h4>
+      <h4 className="lg-m-3 sm-m-1 md-m-2 mt-5 text-center text-danger">
+        No Quiz Found
+      </h4>
     );
   }
 
   return (
     <>
-      <div className="row m-4">
+      <div className="row lg-m-4 sm-m-1 md-m-2 mt-4">
         <Table
           responsive="md"
           bordered

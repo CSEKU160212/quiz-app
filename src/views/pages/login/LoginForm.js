@@ -59,10 +59,10 @@ const LoginForm = () => {
 
   return (
     <>
-      <Card className="m-5" style={{ border: "none" }}>
+      <Card className="lg-m-5 sm-m-1 md-m-4" style={{ border: "none" }}>
         <Card.Body>
           <h5 className="text-center mb-3 text-primary">LOGIN</h5>
-          <AlertMessage variant="danger" message={errorMessage}/>
+          <AlertMessage variant="danger" message={errorMessage} />
           <Form>
             <Form.Group className="mb-3" controlId="email">
               <Form.Label>Email</Form.Label>

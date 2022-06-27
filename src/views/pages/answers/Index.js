@@ -85,9 +85,9 @@ const Index = (props) => {
     formatQuiz.user = authUser;
     setCompleteQuizList(formatedQuiz);
 
-    const customResultText = `You hav got ${result} out of ${questions.length}`;
+    const customResultText = `You have got ${result} out of ${questions.length}`;
 
-    alert()
+    alert(customResultText);
     setResultText(customResultText, () => {
       toggleShowResult(showResultModal);
     });
@@ -95,14 +95,17 @@ const Index = (props) => {
 
   return (
     <>
-      <div className="m-3">
+      <div className="lg-m-3 sm-m-1 md-m-2">
         <h3 className="text-center">{`Topic ${quiz?.topic}`}</h3>
       </div>
 
       {questions &&
         questions.map((questionItem, questionIndex) => {
           return (
-            <Row key={`question-${questionItem.id}`} className="m-2">
+            <Row
+              key={`question-${questionItem.id}`}
+              className=" lg-m-2 sm-m-1 md-m-2"
+            >
               <Col sm={12} md={8} lg={6} className="mx-auto">
                 <Card>
                   <Card.Header>

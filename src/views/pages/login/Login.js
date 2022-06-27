@@ -25,7 +25,7 @@ const Login = () => {
     <>
       <TheHeader />
       <Container>
-        <div className="row m-4">
+        <div className="row lg-m-4 sm-m-1 md-m-2">
           <Row className="align-items-center flex-column-reverse flex-md-row">
             <Col md={6}>
               <LoginForm />
