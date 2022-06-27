@@ -15,7 +15,7 @@ import {
   setCompleteQuizList,
   setLocalStorageUserQuiz,
 } from "../../../utils/localStorageHandlers";
-import ResultModal from "./ResultModal";
+// import ResultModal from "./ResultModal";
 
 const Index = (props) => {
   const { match } = props;
@@ -104,7 +104,7 @@ const Index = (props) => {
           return (
             <Row
               key={`question-${questionItem.id}`}
-              className=" lg-m-2 sm-m-1 md-m-2"
+              className=" lg-m-2 sm-m-1 md-m-2 mb-3"
             >
               <Col sm={12} md={8} lg={6} className="mx-auto">
                 <Card>
@@ -161,11 +161,11 @@ const Index = (props) => {
           Submit
         </Button>
       </div>
-      <ResultModal
+      {/* <ResultModal
         toggleShowResult={toggleShowResult}
         message={resultText}
         show={showResultModal}
-      />
+      /> */}
     </>
   );
 };
