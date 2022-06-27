@@ -1,0 +1,21 @@
+.page-body {
+    background-color: yellow;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+    padding: 10px;
+}
+
+.font-404 {
+    font-size: 150px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.message-font {
+    font-family: cursive;
+}
