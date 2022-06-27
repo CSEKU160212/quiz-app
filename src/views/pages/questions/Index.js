@@ -93,7 +93,7 @@ const Questions = (props) => {
 
     return (
       <>
-        <div className="m-3 mb-5">
+        <div className="lg-m-3 sm-m-1 md-m-2 mb-5">
           {quiz && (
             <h3 className="text-center">{`Quiz Topic: ${quiz.topic}`}</h3>
           )}
@@ -106,7 +106,7 @@ const Questions = (props) => {
                 return (
                   <Card
                     as="div"
-                    className="m-3 mt-4 shadow rounded"
+                    className="lg-m-3 sm-m-1 md-m-2 mt-4 shadow rounded"
                     key={`question-${questionIndex}`}
                   >
                     <Card.Header>
@@ -124,27 +124,35 @@ const Questions = (props) => {
                       )}
 
                       {editQuestionId === questionItem.id ? (
-                        <Form.Group
-                          className="mb-2 justify-content-center mx-auto"
-                          style={{ width: "60%" }}
-                          controlId={`questions-${questionIndex}`}
-                        >
-                          <Form.Label>
-                            <strong>{`Question:`}</strong>
-                          </Form.Label>
-                          <Form.Control
-                            type="text"
-                            size="sm"
-                            onChange={(e) =>
-                              questionOnChangeHandler(e, questionIndex)
-                            }
-                            defaultValue={questionItem.question}
-                            isInvalid={!!formErrors?.question}
-                          />
-                          <Form.Control.Feedback type="invalid">
-                            {formErrors?.question}
-                          </Form.Control.Feedback>
-                        </Form.Group>
+                        <Row>
+                          <Col
+                            sm={12}
+                            md={6}
+                            lg={6}
+                            className="justify-content-center mx-auto"
+                          >
+                            <Form.Group
+                              className="mb-2"
+                              controlId={`questions-${questionIndex}`}
+                            >
+                              <Form.Label>
+                                <strong>{`Question:`}</strong>
+                              </Form.Label>
+                              <Form.Control
+                                type="text"
+                                size="sm"
+                                onChange={(e) =>
+                                  questionOnChangeHandler(e, questionIndex)
+                                }
+                                defaultValue={questionItem.question}
+                                isInvalid={!!formErrors?.question}
+                              />
+                              <Form.Control.Feedback type="invalid">
+                                {formErrors?.question}
+                              </Form.Control.Feedback>
+                            </Form.Group>
+                          </Col>
+                        </Row>
                       ) : (
                         <Card.Title className="text-center">
                           {`${questionIndex + 1}) ${questionItem.question}`}

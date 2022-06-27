@@ -19,7 +19,11 @@ const CredentialsPopupModal = () => {
           {loginCredentials.map((user) => {
             return (
               <>
-                <Card key={user.id} bg="light" className="m-2">
+                <Card
+                  key={user.id}
+                  bg="light"
+                  className="lg-m-2 sm-m-1 md-m-2"
+                >
                   <Card.Header>{`${user.role.toUpperCase()}`}</Card.Header>
                   <Card.Body>
                     <div>
