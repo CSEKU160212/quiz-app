@@ -35,7 +35,7 @@ const Quizzes = () => {
           {quizList &&
             getActiveQuizList(quizList).map((quiz) => {
               return (
-                <Col md={6} sm={12} lg={4} key={quiz.id} >
+                <Col md={6} sm={12} lg={4} key={quiz.id} className="mb-3">
                   <Card
                     as="div"
                     className="lg-m-3 sm-m-1 md-m-2 text-center shadow rounded"
